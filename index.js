@@ -13,6 +13,10 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
 
+app.get('/', (req, res) => {
+  res.send("Welcome to RenderExpress Test Service")
+})
+
 app.get('/orders', (req, res) => {
   res.json(orders)
 })
